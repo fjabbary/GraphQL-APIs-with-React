@@ -1,9 +1,9 @@
 name: React CI/CD Test
 on: push
-jobs: 
-  build: 
+jobs:
+  build:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Check out our code (Clone our code)
         uses: actions/checkout@v4
       - name: Use Node.js
@@ -11,9 +11,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Print debug info
-        run: | 
+        run: |
           echo "Node Version: $(node --version)"
           echo "NPM Version: $(npm --version)"
           echo "Working Directory: $(pwd)"
           echo "Directory Contents: $(ls -l)"
-          echo "node_modules: $(ls -l node-modules)"
+          echo "node_modules: $(ls -l node_modules)"
